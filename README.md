@@ -13,8 +13,8 @@
 ## 🖼️ Prévia do Projeto
 
 <div align="center">
-  <img src="C:\Users\01852632\Pictures\Captura de tela 2025-12-01 145310.png.bz2" alt="Página Inicial" width="45%">
-  <img src="C:\Users\01852632\Pictures\Captura de tela 2025-12-01 145310.png.bz2" alt="Catálogo de Filmes" width="45%">
+  <img src="image_1610a0.png" alt="Página Inicial" width="45%">
+  <img src="image_162342.jpg" alt="Catálogo de Filmes" width="45%">
 </div>
 
 ---
@@ -77,6 +77,9 @@ src/
 ├── ⚛️ App.tsx              # Componente Raiz (Roteamento Manual)
 ├── 🎨 index.css            # Reset CSS e Variáveis Globais
 └── ⚛️ main.tsx             # Entry Point (Renderização DOM)
+
+
+
 
 🚀 Como Executar
 Este projeto depende de dois processos rodando simultaneamente: o Frontend (React) e o Backend (JSON Server).
