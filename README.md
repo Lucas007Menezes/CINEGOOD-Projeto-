@@ -77,3 +77,60 @@ src/
 ├── ⚛️ App.tsx              # Componente Raiz (Roteamento Manual)
 ├── 🎨 index.css            # Reset CSS e Variáveis Globais
 └── ⚛️ main.tsx             # Entry Point (Renderização DOM)
+
+🚀 Como Executar
+Este projeto depende de dois processos rodando simultaneamente: o Frontend (React) e o Backend (JSON Server).
+
+1️⃣ Pré-requisitos
+Certifique-se de ter o Node.js instalado em sua máquina.
+
+2️⃣ Instalação
+Clone o repositório e instale as dependências:
+
+Bash
+
+git clone [https://github.com/seu-usuario/cinegood.git](https://github.com/seu-usuario/cinegood.git)
+cd cinegood
+npm install
+3️⃣ Rodando a Aplicação
+Você precisará de dois terminais abertos:
+
+Terminal A (Servidor de Dados):
+
+Bash
+
+npm run server
+O servidor iniciará em http://localhost:3001
+
+Terminal B (Aplicação Web):
+
+Bash
+
+npm run dev
+O site iniciará em http://localhost:5173
+
+🧠 Aprendizados Acadêmicos
+Este projeto serve como estudo de caso para:
+
+React 19 & Hooks: Uso intensivo de useState para controle de UI e useEffect para ciclo de vida.
+
+TypeScript "Strict": Configuração verbatimModuleSyntax exigindo import type para melhor tree-shaking.
+
+Componentização: Criação de componentes isolados (Card, Form) que se comunicam via props e callbacks.
+
+Consumo de API: Padrão de Service Layer (api.ts) para isolar a lógica de fetch dos componentes visuais.
+
+🤝 Contribuição
+Contribuições são o que fazem a comunidade open source um lugar incrível para aprender, inspirar e criar. Qualquer contribuição que você fizer será muito apreciada.
+
+Faça um Fork do projeto
+
+Crie uma Branch para sua Feature (git checkout -b feature/IncrívelFeature)
+
+Adicione suas mudanças (git add .)
+
+Comite suas mudanças (git commit -m 'Adicionando uma Incrível Feature')
+
+Faça o Push da Branch (git push origin feature/IncrívelFeature)
+
+Abra um Pull Request
