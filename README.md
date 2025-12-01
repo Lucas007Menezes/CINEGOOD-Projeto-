@@ -1,73 +1,104 @@
-# React + TypeScript + Vite
+🎬 CineGood
+Seu universo cinematográfico, organizado.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O CineGood é uma aplicação Single Page Application (SPA) desenvolvida para gerenciar um catálogo pessoal de filmes e séries. Mais do que um simples CRUD, este projeto é um estudo prático sobre arquitetura de componentes, tipagem estática e consumo de APIs no ecossistema React moderno.
 
-Currently, two official plugins are available:
+✨ Funcionalidades
+🗂️ Organização Visual: Visualize seus títulos em cards interativos com pôsteres.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+⭐ Sistema de Avaliação: Classifique suas obras favoritas de 0 a 5 estrelas.
 
-## React Compiler
+✅ Controle de Progresso: Marque o que já assistiu e o que está na sua lista de pendentes.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+⚡ Gestão Completa: Adicione, edite e remova títulos instantaneamente.
 
-## Expanding the ESLint configuration
+📱 Responsividade: Interface adaptável para Desktop e Mobile.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🛠️ Tecnologias & Ferramentas
+Este projeto foi construído utilizando as melhores práticas do mercado atual:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+React 19: A biblioteca UI mais popular do mundo.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+TypeScript: Segurança e previsibilidade através de tipagem estática.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Vite: Build tool de última geração para um desenvolvimento ultra-rápido.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+CSS Nativo: Estilização modularizada e performática.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+JSON Server: Simulação completa de uma API RESTful para o backend.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+📂 Estrutura do Projeto
+A arquitetura de pastas foi pensada para ser escalável e intuitiva. Abaixo, a árvore de arquivos explicada:
+
+Plaintext
+
+src/
+├── 📂 assets/              # Arquivos estáticos (imagens, SVGs, ícones)
+│   └── 🎨 react.svg
+│
+├── 📂 components/          # "Peças de LEGO" da interface (reutilizáveis)
+│   ├── 🎨 Card.css         # Estilos do card de filme
+│   ├── ⚛️ Card.tsx         # Lógica de exibição do item
+│   ├── 🎨 Form.css         # Estilos do formulário
+│   ├── ⚛️ Form.tsx         # Lógica de criação/edição
+│   ├── 🎨 Header.css       # Estilos do cabeçalho
+│   └── ⚛️ Header.tsx       # Barra de navegação superior
+│
+├── 📂 pages/               # Telas completas da aplicação
+│   ├── 🎨 Home.css         # Estilos da página inicial
+│   ├── ⚛️ Home.tsx         # Landing Page (Boas-vindas)
+│   ├── 🎨 List.css         # Estilos do catálogo
+│   └── ⚛️ List.tsx         # Tela de listagem e gerenciamento
+│
+├── 📂 services/            # Comunicação com o mundo externo
+│   └── ts api.ts           # Configuração do Fetch para conectar ao backend
+│
+├── 📂 types/               # O "Contrato" de dados
+│   └── ts index.ts         # Definições de Interfaces (ICatalogItem, etc.)
+│
+├── 🎨 App.css              # Estilos globais do container principal
+├── ⚛️ App.tsx              # Componente Raiz (Gerencia as Rotas manuais)
+├── 🎨 index.css            # Reset de CSS e variáveis globais
+└── ⚛️ main.tsx             # Ponto de entrada (Renderiza o React no DOM)
+🚀 Como Rodar o Projeto
+Para ver a mágica acontecer, você precisará de dois terminais abertos (um para o "Visual" e outro para os "Dados").
+
+Pré-requisitos
+Node.js instalado.
+
+Passo 1: Instalação
+Clone o projeto e instale as dependências:
+
+Bash
+
+git clone https://github.com/seu-usuario/cinegood.git
+cd cinegood
+npm install
+Passo 2: Ligando os Motores
+Terminal 1 (O Backend Simulado): Este comando inicia o banco de dados.
+
+Bash
+
+npm run server
+⚠️ Aguarde a mensagem: JSON Server started on PORT 3001
+
+Terminal 2 (O Frontend - A Aplicação): Este comando inicia o site.
+
+Bash
+
+npm run dev
+Agora, acesse http://localhost:5173 no seu navegador!
+
+🧠 Conceitos Didáticos Aplicados
+Se você está estudando o código, preste atenção nestes pontos:
+
+Componentização: Veja como o Card e o Form são isolados. Eles não sabem "onde" estão, apenas recebem dados (props) e devolvem eventos.
+
+Estado (State): O useState é usado para controlar formulários, modais e a lista de filmes.
+
+Efeitos (Effects): O useEffect na página List.tsx é quem busca os dados assim que a tela carrega.
+
+Roteamento Manual: No App.tsx, usamos um estado simples (currentPage) para trocar de tela, mostrando como funcionam as rotas "por baixo dos panos" antes de usar bibliotecas complexas.
+
+🤝 Contribuição
+Gostou do projeto? Sinta-se livre para abrir uma issue ou enviar um pull request. Toda ajuda é bem-vinda para tornar o CineGood ainda melhor!
