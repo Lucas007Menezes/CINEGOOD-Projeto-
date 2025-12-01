@@ -13,7 +13,7 @@
 ## 🖼️ Prévia do Projeto
 
 <div align="center">
-  <img src="Captura de tela 2025-12-01 145310" alt="Página Inicial" width="45%">
+  <img src="C:\Users\01852632\Pictures\Captura de tela 2025-12-01 145310.png.bz2" alt="Página Inicial" width="45%">
   <img src="image_162342.jpg" alt="Catálogo de Filmes" width="45%">
 </div>
 
