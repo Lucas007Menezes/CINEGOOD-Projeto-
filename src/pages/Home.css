@@ -1,0 +1,116 @@
+.home {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    padding: 2rem;
+  }
+  
+  .home-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    color: #ffffff;
+  }
+  
+  .highlight {
+    background: linear-gradient(135deg, #61dafb 0%, #e50914 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    color: #b3b3b3;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+  }
+  
+  .hero-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .feature {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .feature:hover {
+    transform: translateY(-8px);
+    border-color: #e50914;
+    box-shadow: 0 8px 24px rgba(229, 9, 20, 0.2);
+  }
+  
+  .feature-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  .feature h3 {
+    font-size: 1.25rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature p {
+    color: #b3b3b3;
+    font-size: 1rem;
+  }
+  
+  .btn-hero {
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 1.25rem 3rem;
+    border-radius: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .btn-hero:hover {
+    background: #f40612;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(229, 9, 20, 0.4);
+  }
+  
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .hero-features {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  
+    .btn-hero {
+      width: 100%;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+    }
+  }

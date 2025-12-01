@@ -1,0 +1,36 @@
+{
+    "catalog": [
+      {
+        "id": "1",
+        "title": "Breaking Bad",
+        "type": "series",
+        "status": "watched",
+        "rating": 5,
+        "poster": "https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg"
+      },
+      {
+        "id": "2",
+        "title": "The Shawshank Redemption",
+        "type": "movie",
+        "status": "watched",
+        "rating": 5,
+        "poster": "https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg"
+      },
+      {
+        "id": "3",
+        "title": "Stranger Things",
+        "type": "series",
+        "status": "not-watched",
+        "rating": 0,
+        "poster": "https://image.tmdb.org/t/p/w500/49WJfeN0moxb9IPfGn8AIqMGskD.jpg"
+      },
+      {
+        "id": "4",
+        "title": "Inception",
+        "type": "movie",
+        "status": "watched",
+        "rating": 4,
+        "poster": "https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg"
+      }
+    ]
+  }
