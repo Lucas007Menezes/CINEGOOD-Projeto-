@@ -11,7 +11,7 @@
     box-shadow: 0 12px 24px rgba(229, 9, 20, 0.3);
   }
   
-  /* Poster */
+  
   .card-poster {
     position: relative;
     padding-top: 150%; /* Aspect ratio 2:3 */
@@ -28,7 +28,7 @@
     object-fit: cover;
   }
   
-  /* Overlay */
+ 
   .card-overlay {
     position: absolute;
     top: 0;
@@ -125,7 +125,7 @@
     min-height: 2.8rem;
   }
   
-  /* Avaliação */
+  
   .card-rating {
     display: flex;
     gap: 0.25rem;

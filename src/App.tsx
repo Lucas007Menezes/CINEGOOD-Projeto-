@@ -1,15 +1,4 @@
-/**
- * Componente Principal App
- * 
- * CONCEITOS APLICADOS:
- * - Routing manual com useState (sem biblioteca)
- * - Renderização condicional de páginas
- * - Props drilling para navegação
- * 
- * NOTA PEDAGÓGICA:
- * Em produção, use React Router. Aqui fazemos routing manual
- * para entender o conceito antes de usar bibliotecas.
- */
+
 
 import { useState } from 'react';
 import { Header } from './components/Header';
@@ -27,11 +16,10 @@ function App() {
       <Header 
         showAddButton={currentPage === 'list'}
         onAddClick={() => {
-          // Esta função seria conectada ao modal da List page
-          // Por simplicidade, deixamos vazia aqui
+          
         }}
       >
-        {/* Navegação */}
+        {}
         <nav className="nav">
           <button
             className={`nav-link ${currentPage === 'home' ? 'active' : ''}`}
@@ -59,7 +47,7 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>ReactFlix © 2024 - Projeto Educacional</p>
+        <p>CineGood © 2024 - Projeto Educacional</p>
       </footer>
     </div>
   );

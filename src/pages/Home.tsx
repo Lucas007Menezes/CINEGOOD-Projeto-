@@ -1,11 +1,3 @@
-/**
- * Página Home
- * 
- * CONCEITO:
- * - Landing page da aplicação
- * - Apresentação visual
- * - Call-to-action para ação principal
- */
 
 import './Home.css';
 
@@ -19,7 +11,7 @@ export function Home({ onNavigateToList }: HomeProps) {
       <div className="home-content">
         <div className="hero">
           <h1 className="hero-title">
-            Bem-vindo ao <span className="highlight">ReactFlix</span>
+            Bem-vindo ao <span className="highlight">CineGood</span>
           </h1>
           <p className="hero-subtitle">
             Organize e gerencie seu catálogo pessoal de filmes e séries favoritos

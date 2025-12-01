@@ -1,14 +1,3 @@
-/**
- * Página List
- * 
- * CONCEITOS APLICADOS:
- * - useEffect para carregar dados na montagem
- * - useState para gerenciar múltiplos estados
- * - Operações CRUD completas
- * - Loading states
- * - Error handling
- * - Modal pattern
- */
 
 import { useEffect, useState } from 'react';
 import { Card } from '../components/Card';
@@ -25,14 +14,12 @@ export function List() {
   const [editingItem, setEditingItem] = useState<ICatalogItem | undefined>();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Carregar dados ao montar componente
+  
   useEffect(() => {
     loadItems();
   }, []);
 
-  /**
-   * READ - Buscar todos os itens
-   */
+  
   const loadItems = async () => {
     try {
       setIsLoading(true);
@@ -46,9 +33,7 @@ export function List() {
     }
   };
 
-  /**
-   * CREATE - Adicionar novo item
-   */
+  
   const handleCreate = async (data: CreateCatalogItem) => {
     try {
       setIsSubmitting(true);
@@ -64,9 +49,7 @@ export function List() {
     }
   };
 
-  /**
-   * UPDATE - Atualizar item existente
-   */
+  
   const handleUpdate = async (data: CreateCatalogItem) => {
     if (!editingItem) return;
 
@@ -92,9 +75,7 @@ export function List() {
     }
   };
 
-  /**
-   * DELETE - Remover item
-   */
+  
   const handleDelete = async (id: string) => {
     try {
       await api.delete(id);
@@ -106,19 +87,18 @@ export function List() {
     }
   };
 
-  // Abrir modal para adicionar
   const openAddModal = () => {
     setEditingItem(undefined);
     setIsModalOpen(true);
   };
 
-  // Abrir modal para editar
+  
   const openEditModal = (item: ICatalogItem) => {
     setEditingItem(item);
     setIsModalOpen(true);
   };
 
-  // Fechar modal
+  
   const closeModal = () => {
     setIsModalOpen(false);
     setEditingItem(undefined);
@@ -127,7 +107,7 @@ export function List() {
   return (
     <div className="list-page">
       <div className="list-container">
-        {/* Header da listagem */}
+        {}
         <div className="list-header">
           <h2>Meu Catálogo</h2>
           <button className="btn-add-list" onClick={openAddModal}>
@@ -135,7 +115,7 @@ export function List() {
           </button>
         </div>
 
-        {/* Loading */}
+        {}
         {isLoading && (
           <div className="loading">
             <div className="spinner"></div>
@@ -143,7 +123,7 @@ export function List() {
           </div>
         )}
 
-        {/* Empty State */}
+        {}
         {!isLoading && items.length === 0 && (
           <div className="empty-state">
             <h3>Nenhum item no catálogo</h3>
@@ -154,7 +134,7 @@ export function List() {
           </div>
         )}
 
-        {/* Grid de Cards */}
+        {}
         {!isLoading && items.length > 0 && (
           <div className="grid">
             {items.map((item) => (
@@ -169,7 +149,7 @@ export function List() {
         )}
       </div>
 
-      {/* Modal */}
+      {}
       {isModalOpen && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>

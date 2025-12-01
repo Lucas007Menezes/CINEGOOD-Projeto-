@@ -1,14 +1,5 @@
-/**
- * Componente Card
- * 
- * CONCEITOS APLICADOS:
- * - Desestruturação de props
- * - Renderização condicional
- * - Event handlers tipados
- * - Componente controlado
- */
 
-import { ICatalogItem } from '../types';
+import type { ICatalogItem } from '../types';
 import './Card.css';
 
 interface CardProps {
@@ -18,7 +9,7 @@ interface CardProps {
 }
 
 export function Card({ item, onEdit, onDelete }: CardProps) {
-  // Handler para confirmação de exclusão
+  
   const handleDelete = () => {
     const confirmed = window.confirm(
       `Deseja realmente excluir "${item.title}"?`
@@ -29,10 +20,10 @@ export function Card({ item, onEdit, onDelete }: CardProps) {
     }
   };
 
-  // Placeholder caso não tenha poster
+  
   const posterUrl = item.poster || 'https://via.placeholder.com/300x450/1a1a1a/666?text=Sem+Poster';
 
-  // Renderizar estrelas de avaliação
+  
   const renderStars = () => {
     return Array.from({ length: 5 }, (_, index) => (
       <span 
@@ -46,19 +37,19 @@ export function Card({ item, onEdit, onDelete }: CardProps) {
 
   return (
     <div className="card">
-      {/* Poster */}
+      {}
       <div className="card-poster">
         <img 
           src={posterUrl} 
           alt={item.title}
           onError={(e) => {
-            // Fallback se a imagem falhar ao carregar
+            
             (e.target as HTMLImageElement).src = 
               'https://via.placeholder.com/300x450/1a1a1a/666?text=Erro';
           }}
         />
         
-        {/* Overlay com ações */}
+        {}
         <div className="card-overlay">
           <button 
             className="btn-icon edit" 
@@ -77,9 +68,9 @@ export function Card({ item, onEdit, onDelete }: CardProps) {
         </div>
       </div>
 
-      {/* Conteúdo */}
+      {}
       <div className="card-content">
-        {/* Badges */}
+        {}
         <div className="card-badges">
           <span className={`badge ${item.type}`}>
             {item.type === 'movie' ? '🎬 Filme' : '📺 Série'}
@@ -89,10 +80,10 @@ export function Card({ item, onEdit, onDelete }: CardProps) {
           </span>
         </div>
 
-        {/* Título */}
+        {}
         <h3 className="card-title">{item.title}</h3>
 
-        {/* Avaliação */}
+        {}
         <div className="card-rating">
           {renderStars()}
         </div>

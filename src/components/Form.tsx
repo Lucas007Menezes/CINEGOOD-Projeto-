@@ -1,26 +1,17 @@
-/**
- * Componente Form
- * 
- * CONCEITOS APLICADOS:
- * - Controlled Components (formulário controlado)
- * - useState para gerenciar estado do formulário
- * - Validação de dados
- * - Eventos de formulário tipados
- */
 
-import { useState, FormEvent, useEffect } from 'react';
-import { ICatalogItem, CreateCatalogItem } from '../types';
+import { useEffect, useState, type FormEvent } from 'react';
+import type { CreateCatalogItem, ICatalogItem } from '../types';
 import './Form.css';
 
 interface FormProps {
   onSubmit: (data: CreateCatalogItem) => void;
   onCancel: () => void;
-  initialData?: ICatalogItem; // Para edição
+  initialData?: ICatalogItem; 
   isLoading?: boolean;
 }
 
 export function Form({ onSubmit, onCancel, initialData, isLoading = false }: FormProps) {
-  // Estado do formulário
+  
   const [formData, setFormData] = useState<CreateCatalogItem>({
     title: '',
     type: 'movie',
@@ -31,7 +22,7 @@ export function Form({ onSubmit, onCancel, initialData, isLoading = false }: For
 
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  // Preencher formulário se estiver editando
+  
   useEffect(() => {
     if (initialData) {
       setFormData({
@@ -44,7 +35,7 @@ export function Form({ onSubmit, onCancel, initialData, isLoading = false }: For
     }
   }, [initialData]);
 
-  // Validação
+  
   const validate = (): boolean => {
     const newErrors: Record<string, string> = {};
 
@@ -60,7 +51,7 @@ export function Form({ onSubmit, onCancel, initialData, isLoading = false }: For
     return Object.keys(newErrors).length === 0;
   };
 
-  // Submit
+  
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
@@ -69,14 +60,14 @@ export function Form({ onSubmit, onCancel, initialData, isLoading = false }: For
     }
   };
 
-  // Update field
+  
   const updateField = (field: keyof CreateCatalogItem, value: string | number) => {
     setFormData(prev => ({
       ...prev,
       [field]: value
     }));
     
-    // Limpar erro do campo
+    
     if (errors[field]) {
       setErrors(prev => {
         const newErrors = { ...prev };
@@ -88,7 +79,7 @@ export function Form({ onSubmit, onCancel, initialData, isLoading = false }: For
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      {/* Título */}
+      {}
       <div className="form-group">
         <label htmlFor="title">Título *</label>
         <input
@@ -103,7 +94,7 @@ export function Form({ onSubmit, onCancel, initialData, isLoading = false }: For
         {errors.title && <span className="error-message">{errors.title}</span>}
       </div>
 
-      {/* Tipo e Status */}
+      {}
       <div className="form-row">
         <div className="form-group">
           <label htmlFor="type">Tipo *</label>
@@ -132,7 +123,7 @@ export function Form({ onSubmit, onCancel, initialData, isLoading = false }: For
         </div>
       </div>
 
-      {/* Avaliação */}
+      {}
       <div className="form-group">
         <label htmlFor="rating">Avaliação (0-5)</label>
         <input
@@ -148,7 +139,7 @@ export function Form({ onSubmit, onCancel, initialData, isLoading = false }: For
         {errors.rating && <span className="error-message">{errors.rating}</span>}
       </div>
 
-      {/* Poster */}
+      {}
       <div className="form-group">
         <label htmlFor="poster">URL do Poster (opcional)</label>
         <input
@@ -161,7 +152,7 @@ export function Form({ onSubmit, onCancel, initialData, isLoading = false }: For
         />
       </div>
 
-      {/* Botões */}
+      {}
       <div className="form-actions">
         <button 
           type="button" 

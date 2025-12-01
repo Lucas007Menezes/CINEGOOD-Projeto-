@@ -1,36 +1,36 @@
 {
-    "catalog": [
-      {
-        "id": "1",
-        "title": "Breaking Bad",
-        "type": "series",
-        "status": "watched",
-        "rating": 5,
-        "poster": "https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg"
-      },
-      {
-        "id": "2",
-        "title": "The Shawshank Redemption",
-        "type": "movie",
-        "status": "watched",
-        "rating": 5,
-        "poster": "https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg"
-      },
-      {
-        "id": "3",
-        "title": "Stranger Things",
-        "type": "series",
-        "status": "not-watched",
-        "rating": 0,
-        "poster": "https://image.tmdb.org/t/p/w500/49WJfeN0moxb9IPfGn8AIqMGskD.jpg"
-      },
-      {
-        "id": "4",
-        "title": "Inception",
-        "type": "movie",
-        "status": "watched",
-        "rating": 4,
-        "poster": "https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg"
-      }
-    ]
-  }
+  "catalog": [
+    {
+      "title": "Dragon Ball Z",
+      "type": "series",
+      "status": "watched",
+      "rating": 5,
+      "poster": "https://m.media-amazon.com/images/M/MV5BN2VlNTdlMzQtYzE5OC00YmYwLTgyZTItYjEzMWY0ZDNjMTJhXkEyXkFqcGc@._V1_QL75_UY562_CR7,0,380,562_.jpg",
+      "id": "1"
+    },
+    {
+      "title": "Avengers Endgame - Vingadores Ultimato",
+      "type": "movie",
+      "status": "watched",
+      "rating": 5,
+      "poster": "https://uauposters.com.br/media/catalog/product/cache/1/thumbnail/800x930/9df78eab33525d08d6e5fb8d27136e95/2/0/201906131069-uau-posters-filmes-avengers-endgame-vingadores-ultimato.webp",
+      "id": "2"
+    },
+    {
+      "title": "Peaky blinders",
+      "type": "series",
+      "status": "not-watched",
+      "rating": 5,
+      "poster": "https://i.pinimg.com/originals/50/8f/ba/508fba93c5f1b8f1ea1db81dd969e2a0.jpg",
+      "id": "3"
+    },
+    {
+      "title": "Supernatural ",
+      "type": "series",
+      "status": "watched",
+      "rating": 5,
+      "poster": "https://upload.wikimedia.org/wikipedia/pt/b/bb/Supernatural_temporada_15_poster.jpg",
+      "id": "4"
+    }
+  ]
+}
